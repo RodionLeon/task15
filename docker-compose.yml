@@ -37,6 +37,6 @@ services:
       context: ./apache
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "81:80"
     networks:
       - network
