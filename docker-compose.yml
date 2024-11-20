@@ -6,7 +6,8 @@ networks:
 services:
   nginx:
     container_name: nginx
-    image: rodion0013/trainee:nginx
+    #image: rodion0013/trainee:nginx
+    image: task15:nginx
     build:
       context: .
       dockerfile: ./nginx/Dockerfile
@@ -30,7 +31,8 @@ services:
 
   apache:
     container_name: apache
-    image: rodion0013/trainee:apache
+    #image: rodion0013/trainee:apache
+    image: task15:apache
     build: 
       context: .
       dockerfile: ./apache/Dockerfile
