@@ -1,6 +1,6 @@
 FROM alpine:3.20
 
-COPY ./info.php /var/www/localhost/htdocs/
+COPY ./info.php /var/www/localhost/htdocs/info.php
 
 RUN set -x \
      apk update && \
@@ -13,7 +13,7 @@ RUN set -x \
      chown -R apache2:apache2 /etc/apache2 && \
      chown -R apache2:apache2 /var/www/ && \
      chown -R apache2:apache2 /var/log/apache2 && \
-     chown -R apache2:apache2 /run/apache2 && \
+     chown -R apache2:apache2 /run/apache2 
      #sed -i 's/Listen 80/Listen 8080/g' /etc/apache2/httpd.conf
 USER apache2
 

@@ -9,8 +9,8 @@ services:
     #image: rodion0013/trainee:nginx
     image: task15:nginx
     build:
-      context: .
-      dockerfile: ./nginx/Dockerfile
+      context: ./nginx
+      dockerfile: Dockerfile
     ports:
       - "80:80"
       - "443:443"
@@ -34,8 +34,8 @@ services:
     #image: rodion0013/trainee:apache
     image: task15:apache
     build: 
-      context: .
-      dockerfile: ./apache/Dockerfile
+      context: ./apache
+      dockerfile: Dockerfile
     ports:
       - "81:80"
     networks:
