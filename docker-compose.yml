@@ -17,8 +17,8 @@ services:
     volumes:
     # - /home/rodion0011/task12/nginx/cert/fullchain.pem:/var/www/html/cert/fullchain.pem
     # - /home/rodion0011/task12/nginx/cert/privkey.pem:/var/www/html/cert/privkey.pem
-      - ./nginx/cert/fullchain.pem:/var/www/html/cert/fullchain.pem
-      - ./nginx/cert/privkey.pem:/var/www/html/cert/privkey.pem
+      - /etc/nginx/cert/fullchain.pem:/var/www/html/cert/fullchain.pem
+      - /etc/nginx/cert/privkey.pem:/var/www/html/cert/privkey.pem
     networks:
       - network
 
