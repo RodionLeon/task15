@@ -8,10 +8,10 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 RUN  chown -R nginx:nginx /var/cache/nginx && \
         chown -R nginx:nginx /var/log/nginx && \
         chown -R nginx:nginx /etc/nginx/conf.d && \ 
-        chown -R nginx:nginx  /var/www/html/cert/ && \
-        touch /var/www/html/cert/fullchain.pem && \
-        touch /var/www/html/cert/privkey.pem  && \
-        chmod 644 /var/www/html/cert/fullchain.pem /var/www/html/cert/privkey.pem 
+        chown -R nginx:nginx  /var/www/html/cert/ 
+       # touch /var/www/html/cert/fullchain.pem && \
+       # touch /var/www/html/cert/privkey.pem  && \
+       # chmod 644 /var/www/html/cert/fullchain.pem /var/www/html/cert/privkey.pem 
 RUN touch /var/run/nginx.pid && \
         chown -R nginx:nginx /var/run/nginx.pid
 USER nginx
