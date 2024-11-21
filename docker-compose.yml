@@ -15,9 +15,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /home/rodion0011/task12/nginx/cert/fullchain.pem:/var/www/html/cert/fullchain.pem
-      - /home/rodion0011/task12/nginx/cert/privkey.pem:/var/www/html/cert/privkey.pem
-
+    # - /home/rodion0011/task12/nginx/cert/fullchain.pem:/var/www/html/cert/fullchain.pem
+    # - /home/rodion0011/task12/nginx/cert/privkey.pem:/var/www/html/cert/privkey.pem
+      - ./cert/fullchain.pem:/var/www/html/cert/fullchain.pem
+      - ./cert/privkey.pem:/var/www/html/cert/privkey.pem
     networks:
       - network
 
